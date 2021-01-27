@@ -1,0 +1,731 @@
+
+@font-face{
+    font-family: "AkzidenzGrotesk-Extended";
+    src: url(fonts/AkzidenzGrotesk-Extended.woff2);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+
+@font-face{
+	font-family: "Courier New";
+	font-family: "Arial";
+	font-family: "Helvetica";
+}
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	/*font-family: "AbsaraSans-RegularItalic";*/
+	font-family: "Arial";
+
+	font-style: thin;
+	background-color: white;
+	/*background-color: #171717;*/
+	/*color: black;*/
+
+	/*
+	font-family: "Helvetica";
+	-webkit-text-stroke: 1px black;
+	font-style: italic;
+	*/
+}
+
+.section{
+	width: 100%;
+}
+
+.open{
+	height:100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container{
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 80px;
+	position: relative;
+}
+
+h1{
+	/*
+	font-family: "AkzidenzGrotesk-Extended";
+	*/
+    font-weight: normal;
+    text-decoration: line-through;
+    text-align: center;
+    font-size: 4vw;
+    margin: 0;
+    line-height: 0.9em;
+    text-decoration-thickness: 0.2vw;
+}
+
+.quote-wrapper{
+	/*
+	font-family: 'Raleway', sans-serif, italic;
+	*/
+	font-size: 7.4vw;
+	margin-top: 250px;
+	margin-bottom: 100px;
+	text-align: center;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+
+.title-wrapper{
+	position: relative;
+}
+
+/*
+.title-wrapper:hover  .bbc-subtitles{
+	opacity: 1;
+}
+*/
+
+h2{
+	/*
+	font-family: "AbsaraSans-RegularItalic";
+	*/
+	font-size: 1vw;
+	font-weight: normal;
+	padding-top: 25px;
+}
+
+h3{
+	/*
+	font-family: "AkzidenzGrotesk-Extended";
+	*/
+	font-weight: normal;
+	font-size: 3vw;
+	margin-top: 100px;
+	padding-bottom: -100px;
+	margin-left: 3%;
+}
+
+h4{
+	/*
+	font-family: "AkzidenzGrotesk-Extended";
+	*/
+	text-align: center;
+	font-weight: normal;
+	font-size: 3.5vw;
+	margin-top: 150px;
+}
+
+p{
+	/*
+	font-family: "AbsaraSans-LightItalic";
+	*/
+	font-size: 25px;
+	font-weight: lighter;
+	box-decoration-break: clone;
+	display: inline-block;
+}
+
+h5{
+	/*
+	font-family: "AkzidenzGrotesk-Extended";
+	*/
+	margin-top: 140px;
+	padding-bottom: -50px;
+	font-size: 1vw;
+}
+
+.bbc-subtitles{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	
+	font-family: 'JetBrains Mono', monospace;
+	
+	color: #00f6ff;
+	font-size: 4vw;
+	background-color: #383838;
+}
+
+
+.bbc-subtitles#left{
+	left: 0;
+}
+
+.bbc-subtitles#right{
+	right: 0;
+}
+
+
+
+.row{
+	display: flex;
+}
+
+.col-4{
+	width: 33%;
+	padding: 15px;
+}
+
+.col-6{
+	width: 50%;
+	padding: 15px;
+}
+
+.offset-6{
+	margin-left: 50%;
+}
+
+.offset-4{
+	margin-left: 33.33%;
+}
+
+.col-8{
+	width: 66.6%;
+	padding: 15px;
+	margin-left: 16.6%;
+	text-align: center;
+}
+
+.col-10{
+	width: 83.3%;
+	padding: 15px;
+	margin-left: 8.35%;
+}
+
+.col-12{
+	width: 100%;
+}
+
+.offset-3{
+	margin-left:25%;
+}
+
+.leftindicators{
+	margin-right: 0%;
+}
+
+.distance{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+.color1{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+.background1{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+.stroke1{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+.speed1{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+.multi{
+	font-size: 4vw;
+	position: absolute;
+	left:4%;
+	text-align: justify;
+	mix-blend-mode: exclusion;
+}
+
+
+span {
+	/*
+	font-family: "AbsaraSans-RegularItalic";
+	*/
+    display: inline-block;
+    position: relative;
+    transition: opacity 0.4s;
+    /*color: black;*/
+    line-height: 1.15;
+    width: fit-content;
+}
+
+.marquee {
+	padding-top: 25px;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    --offset: 27vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+    position: absolute;
+    left: 0;
+}
+
+#top{
+	top:0;
+}
+
+#bottom{
+	bottom:0;
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+	text-align: center;
+    font-size: 2vw;
+    padding: 0 0.01vw;
+	white-space: nowrap;
+	line-height: 1.15;
+}
+
+.marquee .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+
+#one{
+	width:24.999%;
+	position: absolute;
+	top:500px;
+	z-index:0;
+	/* mix-blend-mode: exclusion; */
+	/*mix-blend-mode: screen;*/
+}
+
+#two{
+	width:24.999%;
+	position: absolute;
+	top:600px;
+	left:15%;
+	z-index: 1;
+	/* mix-blend-mode: exclusion; */
+	/*mix-blend-mode: screen;*/
+}
+
+#one:hover{
+	z-index: 5;
+}
+
+
+#three{
+	width:24.999%;
+	position: absolute;
+	top:1500px;
+	left:20%;
+	z-index: 2;
+	/* mix-blend-mode: exclusion; */
+	/*mix-blend-mode: screen;*/
+}
+
+#four{
+	width:24.999%;
+	position: absolute;
+	top:1500px;
+	right:10%;
+	z-index: 4;
+	/* mix-blend-mode: exclusion; */
+	/*mix-blend-mode: screen;*/
+}
+
+#five{
+	width:24.999%;
+	position: absolute;
+	top:1900px;
+	right:20%;
+	z-index:3;
+	/* mix-blend-mode: exclusion; */
+	/*mix-blend-mode: screen;*/
+}
+
+#five:hover{
+	z-index: 5;
+}
+
+
+#grid{
+	position: absolute;
+	align-items: center;
+	top:5660px;
+	width:100%;
+}
+
+#tv{
+	width: 85%;
+	top: 200px;
+	position: absolute;
+	z-index: -1;
+}
+
+/*
+.amazon{
+	font-family: "AbsaraSans-LightItalic";
+	font-size: 25px;
+	font-weight: lighter;
+}
+
+.amazon:hover{
+	font-family: "Arial";
+	font-size: 25px;
+	-webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    background: black;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.netflix{
+	font-family: "AbsaraSans-LightItalic";
+	font-size: 25px;
+	font-weight: lighter;
+}
+
+.netflix:hover{
+	font-family: "Arial";
+	font-weight: bold;
+	font-size: 25px;
+	-webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+}
+*/
+
+#applegif{
+	position: absolute;
+	width: 65%;
+	right:8%;
+	z-index: -2;
+	opacity: 0;
+}
+
+#amazongif{
+    position: absolute;
+	width: 30%;
+	top: 450px;
+	right:10%;
+	z-index: -2;
+	opacity: 0;
+
+}
+
+#netflixgif{
+    position: absolute;
+	width: 60%;
+	top: 140px;
+	right:7%;
+	z-index: -2;
+}
+
+#googlegif{
+    position: absolute;
+	width: 30%;
+	top: 80px;
+	right:5%;
+	z-index: -2;
+	opacity: 0;
+
+}
+
+mark{
+	color: white;
+	background: black;
+}
+
+mark:hover{
+	color:red;
+	background: black;
+	height: 60%;
+}
+
+#backG { 
+	width: 200px; 
+    height: 50px; 
+    color: white; 
+    background: green; 
+    margin: 0 auto; 
+} 
+
+
+
+
+
+/*
+button:hover{
+	background-color: white;
+	color:black;
+}
+
+
+/*
+button {
+	vertical-align: bottom;
+	margin: 0 0.3125em;
+	padding: 0 0.3125em;
+	border: 1px solid #000;
+	background-color: #fff;
+	font-weight: bold;
+	font-size: 2em;
+	transform: rotate(-90deg);
+	left:20px;
+}
+*/
+
+/*
+button#increasetext {
+	font-size: 1.50em;
+}
+
+button#resettext {
+	font-size: 1.25em;
+}
+
+button#decreasetext {
+	font-size: 1.125em;
+}
+*/
+
+
+
+.textcontrols {
+	padding: 0.625em 0;
+	text-align: center;
+}
+
+.netflixsubtitles{
+	color: white;
+	font-family: "Arial";
+	-webkit-text-stroke-width: 0.7px;
+	-webkit-text-stroke-color: black;
+}
+
+.amazonsubtitles{
+	color: yellow;
+	font-family: "Arial";
+	-webkit-text-stroke-width: 0.7px;
+	-webkit-text-stroke-color: black;
+}
+
+.googlesubtitles{
+	color: white;
+	font-family: "Arial";
+	-webkit-text-stroke-width: 0.7px;
+	-webkit-text-stroke-color: black;
+	opacity: 100%;
+}
+
+.googlesubtitles p{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles h1{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles h2{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles h3{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles h4{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles h5{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles span{
+	background: black;
+	opacity: 70%;
+}
+
+.googlesubtitles .quote-wrapper{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles{
+	color: #1AFCF5;
+	font-family: "Courier New";
+	opacity: 100%;
+}
+
+.bbcsubtitles p{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles h1{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles h2{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles h3{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles h4{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles h5{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles span{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitles .quote-wrapper{
+	background: black;
+	opacity: 70%;
+}
+
+.bbcsubtitle ~ body{
+	background: black;
+}
+
+#blackbutton{
+	top: 90px;
+	background-color: black;
+	color: black;
+}
+
+#greenbutton{
+	top: 140px;
+	background-color: #66ff33;
+	color: #deff08;
+}
+
+#bluebutton{
+	top: 190px;
+	background-color: #1a1aff;
+	color: #1a1aff;
+}
+
+#yellowbutton{
+	top: 240px;
+	background-color: #ffff00;
+	color: #ffff00;
+}
+
+#redbutton{
+	top: 290px;
+	background-color: #ff3300;
+	color: #ff3300;
+}
+
+#whitebutton{
+	top: 340px;
+	background-color: white;
+	color: white;
+}
+
+#netflixbutton {
+  top: 490px;
+}
+
+#amazonbutton {
+  top: 440px;
+}
+
+#googlebutton {
+  top: 590px;
+}
+
+#bbcbutton {
+  top: 540px;
+}
+
+
+
+button {
+  background-color: white;
+  border-color: black;
+  border-radius: 0px;
+  width: 445px;
+  height: 30px;
+  position: fixed;
+  left: -423px;
+  transition: .6s ease;
+  text-align: right;
+}
+
+button:hover {
+  background-color: white;
+  position: fixed;
+  left: -50px;
+  width: 170px;
+  border-radius: 0px;
+}
+
+button:active {
+  background-color: black;
+  color: white;
+  transition: 0s;
+}
+
+
+.break {
+    &.lh2 {
+      line-height:1.5em;
+    }
+    &.bdc {
+      box-decoration-break:clone;
+      padding: 3px 10px;
+    }
+    }
+}
