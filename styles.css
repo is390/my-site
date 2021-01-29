@@ -136,7 +136,9 @@ h5{
 	*/
 	margin-top: 140px;
 	padding-bottom: -50px;
-	font-size: 1.2vw;
+	font-size: 1.3vw;
+	text-align: center;
+	margin:0;
 }
 
 .bbc-subtitles{
