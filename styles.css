@@ -721,9 +721,9 @@ button:active {
   transition: 0s;
 }
 
-button: focus{
+button:focus{
 	outline: 0;
-	background: black;
+	background-color: black;
 }
 
 
