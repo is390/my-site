@@ -721,6 +721,11 @@ button:active {
   transition: 0s;
 }
 
+button: focus{
+	outline: 0;
+	background: black;
+}
+
 
 .break {
     &.lh2 {
